@@ -9,6 +9,14 @@
         android:id="@+id/display"
         layout="@layout/include_display" />
 
+    <include
+        android:id="@+id/oprationAdvanced"
+        layout="@layout/include_ops_advanced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/spacing_large" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,28 +24,23 @@
         android:layout_gravity="center">
 
         <include
-            android:id="@+id/oprationAdvanced"
-            layout="@layout/include_ops_advanced"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/spacing_large" />
-
-        <include
             android:id="@+id/numbers"
             layout="@layout/include_numbers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/spacing_large" />
+            android:layout_marginBottom="@dimen/spacing_large" />
 
         <include
             android:id="@+id/operationsBasic"
             layout="@layout/include_ops_basic" />
 
-        <include
-            android:id="@+id/operationsBasic2"
-            layout="@layout/include_ops_basic_2" />
-
-
     </LinearLayout>
+
+    <include
+        android:id="@+id/operationsBasic2"
+        layout="@layout/include_ops_basic_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
