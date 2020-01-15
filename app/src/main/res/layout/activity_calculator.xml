@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/numbers"
+        layout="@layout/include_display" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <include
+            android:id="@+id/numbers"
+            layout="@layout/include_ops_advanced"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_large" />
+
+        <include
+            android:id="@+id/numbers"
+            layout="@layout/include_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_large" />
+
+        <include
+            android:id="@+id/operationsBasic"
+            layout="@layout/include_ops_basic" />
+
+        <include
+            android:id="@+id/operationsBasic2"
+            layout="@layout/include_ops_basic_2" />
+
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

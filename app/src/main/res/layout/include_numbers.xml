@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnNumber7"
+        style="@style/Button"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNumber8"
+        style="@style/Button"
+        android:text="8"
+        app:layout_constraintStart_toEndOf="@+id/btnNumber7"
+        app:layout_constraintEnd_toStartOf="@+id/btnNumber9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNumber9"
+        style="@style/Button"
+        android:text="9"
+        app:layout_constraintStart_toEndOf="@+id/btnNumber8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNumber4"
+        style="@style/Button"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber7" />
+
+    <Button
+        android:id="@+id/btnNumber5"
+        style="@style/Button"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@+id/btnNumber4"
+        app:layout_constraintEnd_toStartOf="@+id/btnNumber6"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber8" />
+
+    <Button
+        android:id="@+id/btnNumber6"
+        style="@style/Button"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@+id/btnNumber5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber9" />
+
+    <Button
+        android:id="@+id/btnNumber1"
+        style="@style/Button"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber4" />
+
+    <Button
+        android:id="@+id/btnNumber2"
+        style="@style/Button"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/btnNumber1"
+        app:layout_constraintEnd_toStartOf="@+id/btnNumber3"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber5" />
+
+    <Button
+        android:id="@+id/btnNumber3"
+        style="@style/Button"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/btnNumber2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber6" />
+
+    <Button
+        android:id="@+id/btnPlusMinus"
+        style="@style/Button"
+        android:text="+/-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber1" />
+
+    <Button
+        android:id="@+id/btnNumber0"
+        style="@style/Button"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/btnPlusMinus"
+        app:layout_constraintEnd_toStartOf="@+id/btnPoint"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber2" />
+
+    <Button
+        android:id="@+id/btnPoint"
+        style="@style/Button"
+        android:text="."
+        app:layout_constraintStart_toEndOf="@+id/btnNumber0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNumber3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
