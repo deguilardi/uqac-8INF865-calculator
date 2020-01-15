@@ -1,37 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
     <Button
         android:id="@+id/btnOpUnknown"
-        style="@style/Button"
-        android:text="&lt;&lt;"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/Button.FullHeight"
+        android:text="&lt;&lt;" />
 
     <Button
         android:id="@+id/btnOpCE"
-        style="@style/Button"
-        android:text="CE"
-        app:layout_constraintStart_toEndOf="@+id/btnOpUnknown"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/Button.FullHeight"
+        android:text="CE" />
 
     <Button
         android:id="@+id/btnOpC"
-        style="@style/Button"
-        android:text="C"
-        app:layout_constraintStart_toEndOf="@+id/btnOpCE"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/Button.FullHeight"
+        android:text="C" />
 
     <Button
         android:id="@+id/btnOpSquareRoot"
-        style="@style/Button"
-        android:text="√"
-        app:layout_constraintStart_toEndOf="@+id/btnOpC"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/Button.FullHeight"
+        android:text="√" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

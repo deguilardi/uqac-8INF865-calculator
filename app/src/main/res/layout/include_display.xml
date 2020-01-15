@@ -10,6 +10,6 @@
     android:background="@color/colorWhite"
     android:textColor="@color/colorDarkGrey"
     android:gravity="right"
-    android:textSize="20sp"
+    android:textSize="30sp"
     android:textStyle="bold"
     tools:text="1+2+3=6" />

@@ -3,44 +3,52 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_large">
 
     <include
         android:id="@+id/display"
-        layout="@layout/include_display" />
+        layout="@layout/include_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_large"/>
 
     <include
         android:id="@+id/oprationAdvanced"
         layout="@layout/include_ops_advanced"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/spacing_large" />
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_weight="1" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_weight="4">
 
         <include
             android:id="@+id/numbers"
             layout="@layout/include_numbers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_large" />
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
 
         <include
             android:id="@+id/operationsBasic"
-            layout="@layout/include_ops_basic" />
+            layout="@layout/include_ops_basic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </LinearLayout>
 
     <include
         android:id="@+id/operationsBasic2"
         layout="@layout/include_ops_basic_2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_weight="1" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
