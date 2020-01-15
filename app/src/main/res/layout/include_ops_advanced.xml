@@ -9,12 +9,14 @@
     <Button
         android:id="@+id/btnOpUnknown"
         style="@style/Button.FullWidth"
-        android:text="&lt;&lt;" />
+        android:text="&lt;&lt;"
+        android:background="@drawable/button_primary_background" />
 
     <Button
         android:id="@+id/btnOpCE"
         style="@style/Button.FullWidth"
-        android:text="CE" />
+        android:text="CE"
+        android:background="@drawable/button_primary_background" />
 
     <Button
         android:id="@+id/btnOpC"

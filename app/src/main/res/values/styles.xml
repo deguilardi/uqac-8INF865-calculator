@@ -6,13 +6,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:colorBackground">@color/colorDarkGrey</item>
     </style>
 
     <style name="Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/button_default_background</item>
+        <item name="android:textColor">@color/colorGreyDark</item>
+        <item name="android:layout_margin">@dimen/spacing_small</item>
     </style>
 
     <style name="Button.FullHeight" parent="Button">

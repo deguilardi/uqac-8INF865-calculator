@@ -4,11 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/spacing_large">
+    android:padding="@dimen/spacing_large"
+    android:background="@drawable/main_background">
 
     <include
         android:id="@+id/display"
-        layout="@layout/include_display" />
+        layout="@layout/include_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_large" />
 
     <LinearLayout
         android:layout_width="match_parent"

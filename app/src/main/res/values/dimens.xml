@@ -7,4 +7,5 @@
     <dimen name="spacing_xlarge">22.0dip</dimen>
     <dimen name="spacing_xxlarge">28.0dip</dimen>
     <dimen name="spacing_banner_bottom">54dp</dimen>
+    <dimen name="radius">30dp</dimen>
 </resources>

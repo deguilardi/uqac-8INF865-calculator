@@ -8,12 +8,14 @@
     <Button
         android:id="@+id/btnOpUnknown"
         style="@style/Button.FullHeight"
-        android:text="&lt;&lt;" />
+        android:text="&lt;&lt;"
+        android:background="@drawable/button_primary_background" />
 
     <Button
         android:id="@+id/btnOpCE"
         style="@style/Button.FullHeight"
-        android:text="CE" />
+        android:text="CE"
+        android:background="@drawable/button_primary_background" />
 
     <Button
         android:id="@+id/btnOpC"
