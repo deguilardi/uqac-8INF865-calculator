@@ -8,12 +8,14 @@
     <Button
         android:id="@+id/btnOpPercentage"
         style="@style/Button.FullWidth"
-        android:text="%" />
+        android:text="%"
+        android:background="@drawable/button_secondary_background" />
 
     <Button
         android:id="@+id/btnOpFraction"
         style="@style/Button.FullWidth"
-        android:text="1/x" />
+        android:text="1/x"
+        android:background="@drawable/button_secondary_background" />
 
     <Button
         android:id="@+id/btnOpEquals"

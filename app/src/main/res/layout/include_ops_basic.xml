@@ -8,21 +8,25 @@
     <Button
         android:id="@+id/btnOpDivide"
         style="@style/Button.FullWidth"
-        android:text="/" />
+        android:text="/"
+        android:background="@drawable/button_secondary_background" />
 
     <Button
         android:id="@+id/btnOpMultiply"
         style="@style/Button.FullWidth"
-        android:text="*" />
+        android:text="*"
+        android:background="@drawable/button_secondary_background" />
 
     <Button
         android:id="@+id/btnOpMinus"
         style="@style/Button.FullWidth"
-        android:text="-" />
+        android:text="-"
+        android:background="@drawable/button_secondary_background" />
 
     <Button
         android:id="@+id/btnOpSum"
         style="@style/Button.FullWidth"
-        android:text="+" />
+        android:text="+"
+        android:background="@drawable/button_secondary_background" />
 
 </LinearLayout>

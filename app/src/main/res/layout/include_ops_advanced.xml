@@ -21,11 +21,13 @@
     <Button
         android:id="@+id/btnOpC"
         style="@style/Button.FullWidth"
-        android:text="C" />
+        android:text="C"
+        android:background="@drawable/button_secondary_background" />
 
     <Button
         android:id="@+id/btnOpSquareRoot"
         style="@style/Button.FullWidth"
-        android:text="√" />
+        android:text="√"
+        android:background="@drawable/button_secondary_background" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
