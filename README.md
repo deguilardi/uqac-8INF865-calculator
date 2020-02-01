@@ -8,7 +8,7 @@ Chicken dodge is a two players game competing against each other. Players red an
 * Goal: Survive the chickens and collect diammonds
 * lives: 3 (each player)
 ![screenshot](/github_assets/screen_horizontal.png)
-![screenshot](/github_assets/screen_vertical.png)
+![screenshot](/github_assets/screen_vertical.png){:height="50%" width="50%"}
 
 ## What is this project for?
 This is a simple academic project. The goal is to build a basic calculator.
