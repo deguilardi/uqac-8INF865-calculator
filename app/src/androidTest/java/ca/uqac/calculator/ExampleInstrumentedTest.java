@@ -1,4 +1,4 @@
-package com.example.uqacinterfaceexercise;
+package ca.uqac.calculator;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.uqacinterfaceexercise", appContext.getPackageName());
+        assertEquals("ca.uqac.calculator", appContext.getPackageName());
     }
 }
