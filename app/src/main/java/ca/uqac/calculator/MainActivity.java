@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     private enum Action{
         NUMBER,
-        OPERATOR
+        OPERATOR,
+        FRACTION
     }
 
     private enum Operation{
@@ -24,10 +25,11 @@ public class MainActivity extends AppCompatActivity {
         MULTIPLY
     }
 
-    private int mLeftNumber = 0;
-    private int mRightNumber = 0;
+    private double mLeftNumber = 0;
+    private double mRightNumber = 0;
     private Action mCurrAction = Action.NUMBER;
     private Operation mCurrOperation = Operation.EQUALS;
+    private double mCurrFraction = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +60,15 @@ public class MainActivity extends AppCompatActivity {
         if(mCurrAction == Action.NUMBER) {
             mRightNumber = mRightNumber * 10 + number;
         }
+        else if(mCurrAction == Action.FRACTION){
+            mRightNumber = mRightNumber + number / mCurrFraction;
+            mCurrFraction *= 10;
+        }
         else{
+            mCurrAction = Action.NUMBER;
             mRightNumber = number;
         }
-        mCurrAction = Action.NUMBER;
-        mDisplay.setText(String.valueOf(mRightNumber));
+        displayIt();
     }
 
     public void hitOperation(View v){
@@ -82,6 +88,26 @@ public class MainActivity extends AppCompatActivity {
         mCurrAction = Action.OPERATOR;
     }
 
+    public void hitPoint(View v){
+        mCurrFraction = 10;
+        mCurrAction = Action.FRACTION;
+    }
+
+    public void hitClear(View v){
+        switch(v.getId()){
+            case R.id.btnOpC:
+                mLeftNumber = 0;
+                mCurrOperation = Operation.EQUALS;
+                // break; no break here
+            case R.id.btnOpCE:
+                mCurrAction = Action.NUMBER;
+                mCurrFraction = 10;
+                mRightNumber = 0;
+                displayIt();
+                break;
+        }
+    }
+
     private void calcEquals(){
         switch (mCurrOperation){
             case SUM: mLeftNumber += mRightNumber; break;
@@ -91,6 +117,16 @@ public class MainActivity extends AppCompatActivity {
             default: mLeftNumber = mRightNumber;
         }
         mRightNumber = mLeftNumber;
-        mDisplay.setText(String.valueOf(mRightNumber));
+        displayIt();
+    }
+
+    private void displayIt(){
+        if(mRightNumber == (int) mRightNumber){
+            mDisplay.setText(String.valueOf((int) mRightNumber));
+        }
+        else {
+            mDisplay.setText(String.valueOf(mRightNumber));
+        }
+
     }
 }

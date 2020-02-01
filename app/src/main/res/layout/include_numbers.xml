@@ -143,6 +143,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="."
+        android:onClick="hitPoint"
         app:layout_constraintStart_toEndOf="@+id/btnNumber0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnNumber3"

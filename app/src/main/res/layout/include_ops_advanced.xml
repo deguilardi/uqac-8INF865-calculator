@@ -16,13 +16,15 @@
         android:id="@+id/btnOpCE"
         style="@style/Button.FullWidth"
         android:text="CE"
-        android:background="@drawable/button_primary_background" />
+        android:background="@drawable/button_primary_background"
+        android:onClick="hitClear"/>
 
     <Button
         android:id="@+id/btnOpC"
         style="@style/Button.FullWidth"
         android:text="C"
-        android:background="@drawable/button_secondary_background" />
+        android:background="@drawable/button_secondary_background"
+        android:onClick="hitClear" />
 
     <Button
         android:id="@+id/btnOpSquareRoot"
