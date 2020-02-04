@@ -9,13 +9,15 @@
         android:id="@+id/btnOpPercentage"
         style="@style/Button.FullHeight"
         android:text="%"
-        android:background="@drawable/button_secondary_background" />
+        android:background="@drawable/button_secondary_background"
+        android:onClick="hitOperation" />
 
     <Button
-        android:id="@+id/btnOpFraction"
+        android:id="@+id/btnOp1x"
         style="@style/Button.FullHeight"
         android:text="1/x"
-        android:background="@drawable/button_secondary_background" />
+        android:background="@drawable/button_secondary_background"
+        android:onClick="hitOperation" />
 
     <Button
         android:id="@+id/btnOpEquals"

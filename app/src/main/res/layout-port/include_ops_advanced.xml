@@ -6,10 +6,11 @@
     android:orientation="horizontal">
 
     <Button
-        android:id="@+id/btnOpUnknown"
+        android:id="@+id/btnOpBackspace"
         style="@style/Button.FullHeight"
         android:text="&lt;&lt;"
-        android:background="@drawable/button_primary_background" />
+        android:background="@drawable/button_primary_background"
+        android:onClick="hitClear" />
 
     <Button
         android:id="@+id/btnOpCE"
@@ -29,6 +30,7 @@
         android:id="@+id/btnOpSquareRoot"
         style="@style/Button.FullHeight"
         android:text="√"
-        android:background="@drawable/button_secondary_background" />
+        android:background="@drawable/button_secondary_background"
+        android:onClick="hitOperation" />
 
 </LinearLayout>

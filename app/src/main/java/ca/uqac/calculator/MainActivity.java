@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import java.util.Stack;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView mDisplay;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private double mLeftNumber = 0;
     private double mRightNumber = 0;
+    private Stack<Double> mPreviousNumbers = new Stack<>();
     private Action mCurrAction = Action.NUMBER;
     private Operation mCurrOperation = Operation.EQUALS;
     private double mCurrFraction = 10;
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void hitNumber(View v){
+        mPreviousNumbers.push(mRightNumber);
         int number = 0;
         switch(v.getId()){
             case R.id.btnNumber0: number = 0; break;
@@ -72,12 +76,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void hitOperation(View v){
+        mPreviousNumbers.clear();
         calcEquals();
         switch(v.getId()){
+
+            // operations with left and right
             case R.id.btnOpSum: mCurrOperation = Operation.SUM; break;
             case R.id.btnOpMinus: mCurrOperation = Operation.MINUS; break;
             case R.id.btnOpDivide: mCurrOperation = Operation.DIVIDE; break;
             case R.id.btnOpMultiply: mCurrOperation = Operation.MULTIPLY; break;
+
+            // straight forward operations
+            case R.id.btnOpSquareRoot:
+                mRightNumber = Math.sqrt(mRightNumber);
+                displayIt();
+                mPreviousNumbers.clear();
+                return; // not break
+            case R.id.btnOpPercentage:
+                mRightNumber /= 100d;
+                displayIt();
+                mPreviousNumbers.clear();
+                return; // not break
+            case R.id.btnOp1x:
+                mRightNumber = 1d / mRightNumber;
+                displayIt();
+                mPreviousNumbers.clear();
+                return; // not break
         }
         mCurrAction = Action.OPERATOR;
     }
@@ -95,6 +119,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void hitClear(View v){
         switch(v.getId()){
+            case R.id.btnOpBackspace:
+                if(!mPreviousNumbers.empty()) {
+                    mRightNumber = mPreviousNumbers.pop();
+                    displayIt();
+                }
+                break;
             case R.id.btnOpC:
                 mLeftNumber = 0;
                 mCurrOperation = Operation.EQUALS;
@@ -103,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 mCurrAction = Action.NUMBER;
                 mCurrFraction = 10;
                 mRightNumber = 0;
+                mPreviousNumbers.clear();
                 displayIt();
                 break;
         }
